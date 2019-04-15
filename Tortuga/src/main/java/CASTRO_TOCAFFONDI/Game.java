@@ -34,13 +34,14 @@ public class Game extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jLanzar = new javax.swing.JButton();
-        jhands = new javax.swing.JLabel();
         jcaparazon = new javax.swing.JLabel();
         jhead = new javax.swing.JLabel();
+        jhands = new javax.swing.JLabel();
         jfooter = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
+        setSize(new java.awt.Dimension(750, 600));
 
         jButton1.setText("Volver");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -52,80 +53,58 @@ public class Game extends javax.swing.JFrame {
 
         jLanzar.setText("Lanzar dados");
         jLanzar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLanzar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLanzarMouseClicked(evt);
+            }
+        });
         jLanzar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jLanzarActionPerformed(evt);
             }
         });
 
-        jhands.setBackground(new java.awt.Color(0, 0, 51));
-        jhands.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jhands.setForeground(new java.awt.Color(255, 255, 255));
-        jhands.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jhands.setOpaque(true);
+        jcaparazon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/caparazon.png"))); // NOI18N
+        jcaparazon.setFocusable(false);
 
-        jcaparazon.setBackground(new java.awt.Color(0, 0, 51));
-        jcaparazon.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jcaparazon.setForeground(new java.awt.Color(255, 255, 255));
-        jcaparazon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jcaparazon.setOpaque(true);
+        jhead.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/head.png"))); // NOI18N
 
-        jhead.setBackground(new java.awt.Color(0, 0, 51));
-        jhead.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jhead.setForeground(new java.awt.Color(255, 255, 255));
-        jhead.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jhead.setOpaque(true);
+        jhands.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/hands.png"))); // NOI18N
 
-        jfooter.setBackground(new java.awt.Color(0, 0, 51));
-        jfooter.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jfooter.setForeground(new java.awt.Color(255, 255, 255));
-        jfooter.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jfooter.setOpaque(true);
+        jfooter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/footer.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(190, 190, 190)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jhead)
+                    .addComponent(jhands)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jcaparazon, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(50, 50, 50)
-                                .addComponent(jfooter, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(60, 60, 60)
-                                .addComponent(jhands, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50)
-                                .addComponent(jhead, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(128, 128, 128))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLanzar)
-                .addGap(63, 63, 63))
+                        .addGap(590, 590, 590)
+                        .addComponent(jLanzar))
+                    .addComponent(jfooter)
+                    .addComponent(jcaparazon)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
+                .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jfooter, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jhands, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addComponent(jcaparazon, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jhead)
+                    .addComponent(jhands)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(jhead, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLanzar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37))
+                        .addGap(420, 420, 420)
+                        .addComponent(jLanzar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jfooter)
+                    .addComponent(jcaparazon)))
         );
 
         pack();
@@ -162,6 +141,10 @@ public class Game extends javax.swing.JFrame {
         //JOptionPane.showMessageDialog(null, "Resultado: ","RESULTADO",JOptionPane.INFORMATION_MESSAGE);
         a.Resultado();
     }//GEN-LAST:event_jLanzarActionPerformed
+
+    private void jLanzarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLanzarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLanzarMouseClicked
 
     /**
      * @param args the command line arguments
