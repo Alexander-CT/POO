@@ -17,10 +17,6 @@ public class Game extends javax.swing.JFrame {
      */
     public Game() {
         initComponents();
-        jhead.setVisible(false);
-        jhands.setVisible(false);
-        jfooter.setVisible(false);
-
     }
 
     /**
@@ -91,6 +87,10 @@ public class Game extends javax.swing.JFrame {
                     .addComponent(jfooter)
                     .addComponent(jcaparazon)))
         );
+        jhead.setVisible(false);
+        jhands.setVisible(false);
+        jfooter.setVisible(false);
+        
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()

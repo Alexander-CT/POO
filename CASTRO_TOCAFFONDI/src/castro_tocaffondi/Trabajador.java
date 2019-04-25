@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package castro_tocaffondi;
 
-/**
- *
- * @author CASTRO TOCAFFONDI
- */
+// @author CASTRO TOCAFFONDI Alexander Piero
+
 public class Trabajador {
     int dni;
     String nombre;
@@ -51,6 +44,7 @@ public class Trabajador {
     }
 
     public float getESSALUD() {
+        ESSALUD=(float) (sueldo*0.05);
         return ESSALUD;
     }
 
@@ -66,8 +60,4 @@ public class Trabajador {
     public void setSueldofinal(float sueldofinal) {
         this.sueldofinal = sueldofinal;
     }
-    
-    
-    
-    
 }

@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package castro_tocaffondi;
 
-/**
- *
- * @author LABORATORIO UCV
- */
+// @author CASTRO TOCAFFONDI Alexander Piero
+
 public class Cuadrado {
     float lado;
     float area;
@@ -39,6 +32,4 @@ public class Cuadrado {
     public void setPerimetro(float perimetro) {
         this.perimetro = perimetro;
     }
-    
-    
 }
